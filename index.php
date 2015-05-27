@@ -25,8 +25,8 @@
 				  
 					if(isset($_POST['start'])){
 						echo "TEST 1";
-						//exec("sudo /usr/bin/killall motion vlc");
-						//exec("raspivid -o - -t 0 -w 800 -h 600 -fps 30 |cvlc -v stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8554}' :demux=h264");
+						shell_exec("sudo /usr/bin/killall motion vlc");
+						shell_exec("raspivid -o - -t 0 -w 800 -h 600 -fps 30 |cvlc -v stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8554}' :demux=h264");
 						//exec("sudo bash /var/www/htdocs/RaspberryProject/scripts/videoStream.sh");
 						echo "Läuft";
 						createStreamDiv($localIP);
@@ -48,12 +48,6 @@
     </div>
     <!-- /.container -->
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
-</html>
+<?php
+	include 'footer.php';
+?>	

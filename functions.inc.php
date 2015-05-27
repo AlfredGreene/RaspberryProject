@@ -8,8 +8,8 @@
 			<meta charset="utf-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<meta name="description" content="">
-			<meta name="author" content="">
+			<meta name="description" content="A website running on a Raspberry Pi for viewing and managing livestreams from other Raspi cameras in the local network.">
+			<meta name="author" content="Thomas Frey">
 
 			<title>'.$title.'</title>
 
@@ -41,19 +41,19 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#">Raspberry Pi</a>
+						<a class="navbar-brand" href="index.php">Raspberry Pi</a>
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li>
-								<a href="#">Videostream</a>
+								<a href="index.php">Videostream</a>
 							</li>
 							<li>
-								<a href="#">Motion Detection</a>
+								<a href="motionDetection.php">Motion Detection</a>
 							</li>
 							<li>
-								<a href="#">Externer Stream</a>
+								<a href="externalStream.php">Externer Stream</a>
 							</li>
 						</ul>
 					</div>
