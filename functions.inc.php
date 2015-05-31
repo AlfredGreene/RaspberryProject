@@ -55,6 +55,9 @@
 							<li>
 								<a href="externalStream.php">Externer Stream</a>
 							</li>
+							<li>
+								<a href="manageDevices.php">Raspberries verwalten</a>
+							</li>
 						</ul>
 					</div>
 					<!-- /.navbar-collapse -->
@@ -76,6 +79,24 @@
 			</embed>
 		 </div>';
 	
+	}
+	
+	function addRaspberryPi($rasberryPiList, $raspberryPi){
+		$rasberryPiList[] = $raspberryPi;
+		file_put_contents("allRaspberries.json",json_encode($rasberryPiList));
+	}
+	
+	function deleteRaspberryPi($raspberryPiList, $RaspiID){
+		unset($raspberryPiList[$RaspiID]);    
+		$raspberryPiList = array_values($raspberryPiList);
+		file_put_contents("allRaspberries.json",json_encode($raspberryPiList));
+	}
+	
+	function getAllRaspberries (){
+		if (file_exists("allRaspberries.json")) {
+		  $raspiFile = file_get_contents("allRaspberries.json");
+		  return json_decode($raspiFile);
+		}
 	}
 	
 ?>

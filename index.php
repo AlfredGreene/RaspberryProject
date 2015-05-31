@@ -3,8 +3,6 @@
 	
 	session_start();
 	
-	
-	
 	htmlHeader("Startseite");
 		
 	//$localIp = "10.142.126.113"; 	// IP @ GIBM
@@ -25,8 +23,8 @@
 				  
 					if(isset($_POST['start'])){
 						echo "TEST 1";
-						shell_exec("sudo /usr/bin/killall motion vlc");
-						shell_exec("raspivid -o - -t 0 -w 800 -h 600 -fps 30 |cvlc -v stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8554}' :demux=h264");
+						//shell_exec("sudo /usr/bin/killall motion vlc");
+						//shell_exec("raspivid -o - -t 0 -w 800 -h 600 -fps 30 |cvlc -v stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8554}' :demux=h264");
 						//exec("sudo bash /var/www/htdocs/RaspberryProject/scripts/videoStream.sh");
 						echo "Läuft";
 						createStreamDiv($localIP);
