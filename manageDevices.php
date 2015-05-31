@@ -28,7 +28,7 @@
 						
 						if(isset($_POST['addRaspi']) && ($raspberryPiList == null || !in_array($_POST['ipAdress'],$raspberryPiList))){
 							addRaspberryPi($raspberryPiList, $_POST['ipAdress']);
-							print '<div class="col-md-6 text-center">
+							print '<div class="col-md-6 col-md-offset-3">
 							<div class="alert alert-success alert-dismissible" role="alert">
 								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 								  <strong>Gespeichert!</strong>Der Raspberry Pi wurde erfolgreich gespeichert!
@@ -59,7 +59,7 @@
 						
 						if(isset($_POST['deleteRaspi']) && $_POST['selectedRaspi'] != "-"){
 							deleteRaspberryPi($raspberryPiList,$_POST['selectedRaspi']);
-							print '<div class="col-md-6 text-center">
+							print '<div class="col-md-6 col-md-offset-3">
 							<div class="alert alert-success alert-dismissible" role="alert">
 								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 								  <strong>Gelöscht!</strong>Der Raspberry Pi wurde erfolgreich gelöscht!
