@@ -71,10 +71,11 @@
 	
 		print '<div class="lead">Aktuelle IP-Adresse: '. $IPAddress .'</p>
 		 <div class="videostream">
-			<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org"
+			<embed type="application/x-vlc-plugin"
+			   name="main-video"	 
 			   width="640"
 			   height="480"
-			   target="http://'.$IPAddress.':8554"
+			   src="http://10.142.126.113:8554/"
 			   controls="false"
 			</embed>
 		 </div>';
