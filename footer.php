@@ -1,5 +1,10 @@
 <?php
-	print '    <!-- jQuery Version 1.11.1 -->
+	print '    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy 2015 by Thomas Frey, GIBM Pratteln  </p>
+      </div>
+    </footer>   
+	<!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->

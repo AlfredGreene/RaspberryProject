@@ -18,6 +18,9 @@
 
 			<!-- Custom CSS -->
 			<link href="css/stylesheet.css" rel="stylesheet">
+			<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+			<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+			<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 		   
 			<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 			<!-- WARNING: Respond.js doesn\'t work if you view the page via file:// -->
@@ -55,8 +58,19 @@
 							<li>
 								<a href="externalStream.php">Externer Stream</a>
 							</li>
+							<li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Verwalten <span class="caret"></span></a>
+							  <ul class="dropdown-menu" role="menu">							 
+								<li>
+									<a href="addDevices.php">Raspberries hinzufügen</a>
+								</li>
+								<li>
+									<a href="deleteDevices.php">Raspberries löschen</a>
+								</li>
+							 </ul>
+							</li>
 							<li>
-								<a href="manageDevices.php">Raspberries verwalten</a>
+								<a href="archive.php">Archiv</a>
 							</li>
 						</ul>
 					</div>
