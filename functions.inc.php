@@ -89,7 +89,7 @@
 			   name="main-video"	 
 			   width="640"
 			   height="480"
-			   src="http://10.142.126.113:8554/"
+			   src="http://'. IPAddress .':8554/"
 			   controls="false"
 			</embed>
 		 </div>';

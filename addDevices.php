@@ -23,7 +23,7 @@
 						print '<form action="'.$_SERVER["PHP_SELF"].'" method="post" accept-charset="utf-8">
 							<input name="ipAdress" type="text" required="required" placeholder="0.0.0.0" title="Gültige IP Adresse: 0-255.0-255.0-255.0-255" pattern="((^|\.)((25[0-5])|(2[0-4]\d)|(1\d\d)|([1-9]?\d))){4}$"\><br><br>
 							<button class="btn btn-default" aria-label="Left Align" name="addRaspi">Speichern</button>
-						</form>';
+						</form><br>';
 						
 						if(isset($_POST['addRaspi']) && ($raspberryPiList == null || !in_array($_POST['ipAdress'],$raspberryPiList))){
 							addRaspberryPi($raspberryPiList, $_POST['ipAdress']);

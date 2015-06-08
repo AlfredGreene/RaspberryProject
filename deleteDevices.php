@@ -32,12 +32,20 @@
 
 						print '</select><br><br>
 						<button class="btn btn-default" aria-label="Left Align" name="deleteRaspi">Löschen</button>
-						</form>';
+						</form><br>';
 						
 						if(isset($_POST['deleteRaspi']) && $_POST['selectedRaspi'] != "-"){
 							deleteRaspberryPi($raspberryPiList,$_POST['selectedRaspi']);
 							print '<div class="col-md-6 col-md-offset-3">
 							<div class="alert alert-success alert-dismissible" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <strong>Gelöscht!</strong>Der Raspberry Pi wurde erfolgreich gelöscht!
+								</div>
+							</div>';
+						}
+						elseif (isset($_POST['deleteRaspi']) && $_POST['selectedRaspi'] == "-") {
+							print '<div class="col-md-6 col-md-offset-3">
+							<div class="alert alert-danger alert-dismissible" role="alert">
 								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 								  <strong>Gelöscht!</strong>Der Raspberry Pi wurde erfolgreich gelöscht!
 								</div>

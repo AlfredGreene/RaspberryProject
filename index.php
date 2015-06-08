@@ -22,18 +22,19 @@
 					</form>';
 				  
 					if(isset($_POST['start'])){
-						echo "TEST 1";
+						//echo "TEST 1";
+						exec("bash /var/www/htdocs/RaspberryProject/scripts/stop_videostream.sh");
 						//exec("sudo /usr/bin/killall motion vlc");
 						//exec("raspivid -o - -t 0 -w 800 -h 600 -fps 30 |cvlc -v stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8554}' :demux=h264");
 						//exec("sudo /usr/bin/raspivid -o - -t 9999999 | sudo /usr/bin/cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8554}' :demux=h264' > /dev/null &");
-						exec("bash /var/www/htdocs/RaspberryProject/scripts/videoStream.sh");
+						exec("bash /var/www/htdocs/RaspberryProject/scripts/start_videostream.sh");
 						createStreamDiv($localIP);
-						echo "Läuft";
+						//echo "Läuft";
 					}
 					
 					if(isset($_POST['stop'])){
 						echo "GESTOPPT";
-						exec("sudo /usr/bin/killall motion vlc");
+						exec("bash /var/www/htdocs/RaspberryProject/scripts/stop_videostream.sh");
 					}
 					
 					unset($_POST);
