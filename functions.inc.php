@@ -83,7 +83,18 @@
 	
 	function createStreamDiv($IPAddress){
 	
-		print '<div class="lead">Aktuelle IP-Adresse: '. $IPAddress .'</p>
+		print '<OBJECT classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921"
+		 codebase="http://downloads.videolan.org/pub/videolan/vlc/latest/win32/axvlc.cab"
+		 width="800" height="600" id="vlc" events="True">
+		 <param name="Src" value="http://'.$IPAddress.':8554/" />
+		 <param name="ShowDisplay" value="True" />
+		 <param name="AutoLoop" value="False" />
+		 <param name="AutoPlay" value="True" />
+		 <embed id="vlcEmb" type="application/x-google-vlc-plugin" version="VideoLAN.VLCPlugin.2" autoplay="yes" loop="no" width="640" height="480"
+		 target="http://'.$IPAddress.':8554/" ></embed>
+		</OBJECT>';
+	
+		/*print '<div class="lead">Aktuelle IP-Adresse: '. $IPAddress .'</p>
 		 <div class="videostream">
 			<embed type="application/x-vlc-plugin"
 			   name="main-video"	 
@@ -92,7 +103,7 @@
 			   src="http://'. $IPAddress .':8554/"
 			   controls="false"
 			</embed>
-		 </div>';
+		 </div>';*/
 	
 	}
 	

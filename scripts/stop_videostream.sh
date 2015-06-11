@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Stop Process "raspivid"
-pkill raspivid
+sudo pkill raspivid
