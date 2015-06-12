@@ -1,7 +1,7 @@
 <?php
 	function htmlHeader($title){
 		print '<!DOCTYPE html>
-		<html lang="en">
+		<html>
 
 		<head>
 
@@ -15,6 +15,8 @@
 
 			<!-- Bootstrap Core CSS -->
 			<link href="css/bootstrap.min.css" rel="stylesheet">
+			
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 			<!-- Custom CSS -->
 			<link href="css/stylesheet.css" rel="stylesheet">
@@ -50,7 +52,10 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li>
-								<a href="index.php">Videostream</a>
+								<a href="aus.php">Aus</a>
+							</li>
+							<li>
+								<a href="stream.php">Videostream</a>
 							</li>
 							<li>
 								<a href="motionDetection.php">Motion Detection</a>

@@ -14,7 +14,7 @@
                 <h1>Video Archiv</h1>
                 <p class="lead">Willkommen im Webinterface des Raspberry Pi's.<br>Hier können Sie Streamen etc.'</p>
 				<?php
-					$filelist = array_diff(scandir('motionarchive/',SCANDIR_SORT_DESCENDING), array('.','..'));
+					$filelist = array_diff(scandir('motionarchive/',SCANDIR_SORT_DESCENDING), array('.','..','Thumbs.db'));
 										
 					$countFiles = count($filelist);
 					

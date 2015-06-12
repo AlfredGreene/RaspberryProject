@@ -21,8 +21,9 @@
 					 if(isset($_POST['startMotion'])) {
 						//exec("sudo /usr/bin/killall vlc motion > /dev/null &");
 						//exec("sudo /var/www/motion -c /var/www/motion-mmal.conf > /dev/null &");
-						shell_exec('bash /var/www/htdocs/RaspberryProject/scripts/stop_motion.sh');
-						shell_exec('bash /var/www/htdocs/RaspberryProject/scripts/start_motion.sh');
+						shell_exec('sudo /var/www/htdocs/RaspberryProject/scripts/stop_motion.sh');
+						shell_exec('sudo /var/www/htdocs/RaspberryProject/scripts/start_motion.sh');
+						
 						print '<div class="col-md-6 col-md-offset-3">
 							<div class="alert alert-info alert-dismissible" role="alert">
 								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -40,7 +41,7 @@
 					 
 					 if (isset($_POST['stopMotion'])){
 						 //exec("sudo /usr/bin/killall vlc motion > /dev/null &");
-						 exec("bash /var/www/htdocs/RaspberryProject/scripts/stop_motion.sh");
+						 shell_exec("bash /var/www/htdocs/RaspberryProject/scripts/stop_motion.sh");
 						 
 						 print '<div class="col-md-6 col-md-offset-3">
 							<div class="alert alert-info alert-dismissible" role="alert">

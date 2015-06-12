@@ -6,5 +6,5 @@
 
 # variant 2
 #sudo motion -n -c /etc/motion/motion.conf &> /dev/null 
- sudo ./motion -c motion-mmalcam.conf
+ sudo /motion -c /motion-mmalcam.conf
  
