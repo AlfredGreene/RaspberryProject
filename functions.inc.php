@@ -52,7 +52,7 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li>
-								<a href="aus.php">Aus</a>
+								<a href="aus.php">Ausschalten</a>
 							</li>
 							<li>
 								<a href="stream.php">Videostream</a>

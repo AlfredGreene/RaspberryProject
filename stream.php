@@ -3,7 +3,7 @@
 	
 	session_start();
 	
-	htmlHeader("Startseite");
+	htmlHeader("Videostream");
 		
 	//$localIP = "10.142.126.113"; 	// IP @ GIBM
 	$localIP = "192.168.0.21"; 		// IP @ Home
