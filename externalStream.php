@@ -95,12 +95,9 @@
 		}
 		
 		function deleteStream(clicked_id){
-			
-			//var button = $('#stopButton').val();
-			//window.alert(button);
 			//var id = "#" + button ;
 			var id = "#" + clicked_id;
-			window.alert(id);
+			//window.alert(id);
 			$( id ).remove();
 		}
 		

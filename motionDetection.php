@@ -2,9 +2,7 @@
 	include 'functions.inc.php';
 	
 	session_start();
-	
-	
-	
+		
 	htmlHeader("Motion Detection");
 ?>
 	 <div class="container">
@@ -18,11 +16,15 @@
 							<button class="btn btn-default" aria-label="Left Align" name="startMotion">Detection starten ...</button>
 						</form><br>';
 						
+						//<button class="btn btn-default" aria-label="Left Align" name="stopMotion">Detection stoppen ...</button>
+						
 					 if(isset($_POST['startMotion'])) {
-						//exec("sudo /usr/bin/killall vlc motion > /dev/null &");
-						//exec("sudo /var/www/motion -c /var/www/motion-mmal.conf > /dev/null &");
-						shell_exec('sudo /var/www/htdocs/RaspberryProject/scripts/stop_motion.sh');
-						shell_exec('sudo /var/www/htdocs/RaspberryProject/scripts/start_motion.sh');
+					 
+						shell_exec('sudo /var/www/htdocs/RaspberryProject/scripts/stop_videostream.sh');
+						
+						shell_exec('bash /var/www/htdocs/RaspberryProject/scripts/stop_motion.sh');
+												
+						shell_exec('bash /var/www/htdocs/RaspberryProject/scripts/start_motion.sh');
 						
 						print '<div class="col-md-6 col-md-offset-3">
 							<div class="alert alert-info alert-dismissible" role="alert">
@@ -31,15 +33,15 @@
 								</div>
 							</div><br>';
 						
-						print '<div class="col-md-6 col-md-offset-3">
+						/*print '<div class="col-md-6 col-md-offset-3">
 						<form action="'.$_SERVER["PHP_SELF"].'" method="post" accept-charset="utf-8">
 							<button class="btn btn-default" aria-label="Left Align" name="stopMotion">Detection stoppen ...</button>
 						</form>
-						</div><br>';						
+						</div><br>';*/						
 							
 					 }	
 					 
-					 if (isset($_POST['stopMotion'])){
+					 /*if (isset($_POST['stopMotion'])){
 						 //exec("sudo /usr/bin/killall vlc motion > /dev/null &");
 						 shell_exec("bash /var/www/htdocs/RaspberryProject/scripts/stop_motion.sh");
 						 
@@ -50,7 +52,7 @@
 								</div>
 							</div>';
 						 
-					 }
+					 }*/
 				?>
 				
 			</div>

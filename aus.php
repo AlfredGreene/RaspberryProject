@@ -26,8 +26,9 @@ include 'functions.inc.php';
 						//exec("sudo /usr/bin/killall motion vlc");
 						//include 'script1.php';
 						//exec("sudo /usr/bin/raspivid -o - -t 9999999 | sudo /usr/bin/cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8554}' :demux=h264' > /dev/null &");
-						shell_exec('sudo /var/www/htdocs/RaspberryProject/scripts/stop_videostream.sh');
-						shell_exec('sudo /var/www/htdocs/RaspberryProject/scripts/stop_motion.sh');
+						shell_exec('bash /var/www/htdocs/RaspberryProject/scripts/stop_videostream.sh');
+						
+						shell_exec('bash /var/www/htdocs/RaspberryProject/scripts/stop_motion.sh');
 						
 						print '<div class="col-md-6 col-md-offset-3">
 							<div class="alert alert-success alert-dismissible" role="alert">

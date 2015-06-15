@@ -29,7 +29,9 @@
 					else {
 						foreach ($filelist as $file) {
 						
-							print '<h3>'.$file.'</h3>
+							$filepath = "motionarchive/".$file;
+							$filedate = date("d.m.Y H:i:s", filectime($filepath));
+							print '<h3>'.$filedate.'</h3>
 							<embed src="motionarchive/'.$file.'" width="400" height="300" autostart="0"></embed><br>';
 							/*print '
 								<h3>'.$file.'</h3>
