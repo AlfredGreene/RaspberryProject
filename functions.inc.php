@@ -1,4 +1,5 @@
 <?php
+	//Header Generate
 	function htmlHeader($title){
 		print '<!DOCTYPE html>
 		<html>
@@ -59,7 +60,7 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Videostream<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">							 
 									<li>
-										<a href="stream.php">Starten / Stoppen</a>
+										<a href="stream.php">Starten</a>
 									</li>
 									<li>
 										<a href="showStream.php">Anzeigen</a>
@@ -94,7 +95,7 @@
 			</nav>';
 	}
 
-	
+	//creates the vlc Plugin
 	function createStreamDiv($IPAddress){
 	
 		print '<OBJECT classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921"
@@ -108,30 +109,19 @@
 		 target="http://'.$IPAddress.':8554/" ></embed>
 		</OBJECT>';
 	
-		/*print '<div class="lead">Aktuelle IP-Adresse: '. $IPAddress .'</p>
-		 <div class="videostream">
-			<embed type="application/x-vlc-plugin"
-			   name="main-video"	 
-			   width="640"
-			   height="480"
-			   src="http://'. $IPAddress .':8554/"
-			   controls="false"
-			</embed>
-		 </div>';*/
-	
 	}
-	
+	//function for saving a new raspi
 	function addRaspberryPi($rasberryPiList, $raspberryPi){
 		$rasberryPiList[] = $raspberryPi;
 		file_put_contents("allRaspberries.json",json_encode($rasberryPiList));
 	}
-	
+	//function for deleting a raspi
 	function deleteRaspberryPi($raspberryPiList, $RaspiID){
 		unset($raspberryPiList[$RaspiID]);    
 		$raspberryPiList = array_values($raspberryPiList);
 		file_put_contents("allRaspberries.json",json_encode($raspberryPiList));
 	}
-	
+	//function for getting all saved raspis
 	function getAllRaspberries (){
 		if (file_exists("allRaspberries.json")) {
 		  $raspiFile = file_get_contents("allRaspberries.json");

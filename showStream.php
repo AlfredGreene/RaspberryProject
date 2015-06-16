@@ -5,8 +5,8 @@
 	
 	htmlHeader("Videostream anzeigen");
 		
-	//$localIP = "10.142.126.113"; 	// IP @ GIBM
-	$localIP = "192.168.0.21"; 		// IP @ Home
+	$localIP = "10.142.126.113"; 	// IP @ GIBM
+	//$localIP = "192.168.0.21"; 		// IP @ Home
 ?>
     <!-- Page Content -->
     <div class="container">

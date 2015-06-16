@@ -3,8 +3,9 @@ include 'functions.inc.php';
 	
 	session_start();
 	
-	htmlHeader("Startseite");
-		
+	htmlHeader("Ausschalten");
+	
+	//Local IP of Raspberry Pi --> here change!	
 	$localIP = "10.142.126.113"; 	// IP @ GIBM
 	//$localIP = "192.168.0.21"; 		// IP @ Home
 ?>
@@ -14,7 +15,7 @@ include 'functions.inc.php';
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>Ausschalten! - Alle Aktivitäten abschalten</h1>
-                <p class="lead">Hier können Sie die Aktivitäten abschalten!</p>
+                <p class="lead">Hier können Sie die Bewegungsüberwachung und den Videostream beenden!</p>
 				<?php
 					
 					
@@ -26,8 +27,10 @@ include 'functions.inc.php';
 						//exec("sudo /usr/bin/killall motion vlc");
 						//include 'script1.php';
 						//exec("sudo /usr/bin/raspivid -o - -t 9999999 | sudo /usr/bin/cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8554}' :demux=h264' > /dev/null &");
-						shell_exec('bash /var/www/htdocs/RaspberryProject/scripts/stop_videostream.sh');
 						
+						// script for stopping videostream
+						shell_exec('bash /var/www/htdocs/RaspberryProject/scripts/stop_videostream.sh');
+						// script for stopping motion
 						shell_exec('bash /var/www/htdocs/RaspberryProject/scripts/stop_motion.sh');
 						
 						print '<div class="col-md-6 col-md-offset-3">

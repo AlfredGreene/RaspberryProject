@@ -14,6 +14,7 @@
                 <h1>Video Archiv</h1>
                 <p class="lead">Willkommen im Webinterface des Raspberry Pi's.<br>Hier können Sie Streamen etc.'</p>
 				<?php
+					//make array of all detection videos
 					$filelist = array_diff(scandir('motionarchive/',SCANDIR_SORT_DESCENDING), array('.','..','Thumbs.db'));
 										
 					$countFiles = count($filelist);
@@ -28,17 +29,12 @@
 					}
 					else {
 						foreach ($filelist as $file) {
-						
+							//show videos on website
 							$filepath = "motionarchive/".$file;
 							$filedate = date("d.m.Y H:i:s", filectime($filepath));
 							print '<h3>'.$filedate.'</h3>
 							<embed src="motionarchive/'.$file.'" width="400" height="300" autostart="0"></embed><br>';
-							/*print '
-								<h3>'.$file.'</h3>
-								<video width="640" height="480" controls>
-								  <source src="motionarchive/'.$file.'" type="video/mp4">
-								  Your browser does not support the video tag.
-								</video>';*/
+							
 						}	
 					}					
 				?>

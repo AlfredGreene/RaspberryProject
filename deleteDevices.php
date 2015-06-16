@@ -3,7 +3,7 @@
 	
 	session_start();
 	
-	htmlHeader("Raspberries verwalten");
+	htmlHeader("Raspberry löschen");
 	
 	$raspberryPiList = null;
 	
